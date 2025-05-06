@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ralph Lauren Half-Zip Tröja | Premium kvalitet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        .product-image:hover {
+            transform: scale(1.03);
+        }
+        .color-option {
+            transition: all 0.2s ease;
+        }
+        .color-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .color-option.selected {
+            border: 2px solid #000;
+        }
+        .add-to-cart {
+            transition: all 0.3s ease;
+        }
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-crown text-2xl text-blue-800"></i>
+                <h1 class="text-2xl font-bold text-gray-800">PremiumTröjor</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Hem</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Herr</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Dam</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Om oss</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-search text-gray-500 hover:text-gray-700 cursor-pointer"></i>
+                <i class="fas fa-user text-gray-500 hover:text-gray-700 cursor-pointer"></i>
+                <div class="relative">
+                    <i class="fas fa-shopping-cart text-gray-500 hover:text-gray-700 cursor-pointer"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </div>
+            </div>
+            <button class="md:hidden text-gray-500">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Product Images -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-4">
+                    <img id="mainImage" src="https://www.stroms.com/image/25115/A4453910.jpg" 
+                         alt="Ralph Lauren Half-Zip Tröja" class="w-full h-auto product-image">
+                </div>
+                <div class="grid grid-cols-4 gap-3">
+                    <div class="cursor-pointer" onclick="changeImage('https://www.stroms.com/image/25115/A4453910.jpg')">
+                        <img src="https://www.stroms.com/image/25115/A4453910.jpg" 
+                             alt="Ralph Lauren Half-Zip Tröja" class="w-full h-auto rounded border border-gray-200 hover:border-gray-400">
+                    </div>
+                    <div class="cursor-pointer" onclick="changeImage('https://www.stroms.com/image/25115/A4453910_1.jpg')">
+                        <img src="https://www.stroms.com/image/25115/A4453910_1.jpg" 
+                             alt="Ralph Lauren Half-Zip Tröja" class="w-full h-auto rounded border border-gray-200 hover:border-gray-400">
+                    </div>
+                    <div class="cursor-pointer" onclick="changeImage('https://www.stroms.com/image/25115/A4453910_2.jpg')">
+                        <img src="https://www.stroms.com/image/25115/A4453910_2.jpg" 
+                             alt="Ralph Lauren Half-Zip Tröja" class="w-full h-auto rounded border border-gray-200 hover:border-gray-400">
+                    </div>
+                    <div class="cursor-pointer" onclick="changeImage('https://www.stroms.com/image/25115/A4453910_3.jpg')">
+                        <img src="https://www.stroms.com/image/25115/A4453910_3.jpg" 
+                             alt="Ralph Lauren Half-Zip Tröja" class="w-full h-auto rounded border border-gray-200 hover:border-gray-400">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h1 class="text-3xl font-bold text-gray-800 mb-2">Ralph Lauren Half-Zip Tröja</h1>
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-500 ml-2">(42 recensioner)</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 px-3 py-1 rounded-full">
+                            <span class="text-blue-800 font-medium">Populär</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <span class="text-2xl font-bold text-gray-900">750 kr</span>
+                        <span class="text-sm text-gray-500 ml-1">inkl. moms</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-gray-700 mb-4">
+                            Denna exklusiva Ralph Lauren Half-Zip tröja är tillverkad av premium kvalitet bomull för optimal komfort och hållbarhet. Perfekt för både vardag och speciella tillfällen.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>100% Premium bomull</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Märkesoriginal från Ralph Lauren</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Halv-zipp för anpassad passform</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Trendig och tidlös design</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium text-gray-800 mb-3">Välj färg:</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="color-option w-12 h-12 rounded-full bg-blue-800 cursor-pointer selected" 
+                                 onclick="selectColor('blue', this)" 
+                                 data-color="blue"></div>
+                            <div class="color-option w-12 h-12 rounded-full bg-gray-200 cursor-pointer" 
+                                 onclick="selectColor('gray', this)" 
+                                 data-color="gray"></div>
+                            <div class="color-option w-12 h-12 rounded-full bg-green-900 cursor-pointer" 
+                                 onclick="selectColor('green', this)" 
+                                 data-color="green"></div>
+                            <div class="color-option w-12 h-12 rounded-full bg-red-700 cursor-pointer" 
+                                 onclick="selectColor('red', this)" 
+                                 data-color="red"></div>
+                            <div class="color-option w-12 h-12 rounded-full bg-black cursor-pointer" 
+                                 onclick="selectColor('black', this)" 
+                                 data-color="black"></div>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium text-gray-800 mb-3">Välj storlek:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">XS</button>
+                            <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">S</button>
+                            <button class="px-4 py-2 border border-gray-300 rounded bg-blue-100 text-blue-800 font-medium hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500">M</button>
+                            <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">L</button>
+                            <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">XL</button>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 text-sm mt-2 inline-block">Storleksguide</a>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+                            <button class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700" onclick="updateQuantity(-1)">-</button>
+                            <input type="number" id="quantity" value="1" min="1" class="w-16 text-center border-0 focus:ring-0">
+                            <button class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700" onclick="updateQuantity(1)">+</button>
+                        </div>
+                        <button class="flex-1 bg-blue-800 hover:bg-blue-900 text-white py-3 px-6 rounded-lg font-medium add-to-cart transition-all flex items-center justify-center" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Lägg i varukorgen
+                        </button>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-start">
+                            <i class="fas fa-truck text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Fri leverans & retur</h4>
+                                <p class="text-sm text-gray-600">Gratis leverans på alla beställningar över 500 kr. 30 dagars öppet köp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Features -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10 text-gray-800">Produktdetaljer</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Premium Material</h3>
+                    <p class="text-gray-600">Tillverkad av 100% högklassig bomull för optimal komfort och andningsförmåga.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ruler-combined text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Perfekt Passform</h3>
+                    <p class="text-gray-600">Halv-zipp design ger dig möjlighet att anpassa tröjans passform efter dina behov.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium text-lg mb-2">Äkta Ralph Lauren</h3>
+                    <p class="text-gray-600">Garanti för äkta Ralph Lauren-produkt med högsta kvalitetsstandard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10 text-gray-800">Kundrecensioner</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 ml-2">5.0</span>
+                    </div>
+                    <h3 class="font-medium mb-2">Perfekt tröja!</h3>
+                    <p class="text-gray-600 mb-4">"Kvalitén är fantastisk och den sitter perfekt. Har fått många komplimanger när jag har haft den på mig."</p>
+                    <p class="text-sm text-gray-500">- Anders, Stockholm</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 ml-2">5.0</span>
+                    </div>
+                    <h3 class="font-medium mb-2">Bästa köpet!</h3>
+                    <p class="text-gray-600 mb-4">"Mycket nöjd med mitt köp. Materialet är mjukt och snyggt, och priset var mycket bra för en äkta Ralph Lauren."</p>
+                    <p class="text-sm text-gray-500">- Emma, Göteborg</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                    Visa alla recensioner
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-10 text-gray-800">Liknande produkter</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ralph Lauren Crewneck" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800 mb-1">Ralph Lauren Crewneck</h3>
+                        <p class="text-gray-500 text-sm mb-2">Herr</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-900">699 kr</span>
+                            <button class="text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736e10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ralph Lauren Polo" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800 mb-1">Ralph Lauren Polo</h3>
+                        <p class="text-gray-500 text-sm mb-2">Herr</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-900">599 kr</span>
+                            <button class="text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ralph Lauren Hoodie" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800 mb-1">Ralph Lauren Hoodie</h3>
+                        <p class="text-gray-500 text-sm mb-2">Herr</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-900">899 kr</span>
+                            <button class="text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f8b7d1da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ralph Lauren T-shirt" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-medium text-gray-800 mb-1">Ralph Lauren T-shirt</h3>
+                        <p class="text-gray-500 text-sm mb-2">Herr</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-900">499 kr</span>
+                            <button class="text-blue-600 hover:text-blue-800">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">PremiumTröjor</h3>
+                    <p class="text-gray-400">Vi erbjuder äkta Ralph Lauren-produkter till konkurrenskraftiga priser med fokus på kvalitet och kundnöjdhet.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Kundservice</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Kontakta oss</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Vanliga frågor</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Retur & byte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Leveransvillkor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Om oss</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Om företaget</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Jobba hos oss</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hållbarheit</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Nyhetsbrev</h3>
+                    <p class="text-gray-400 mb-4">Prenumerera på vårt nyhetsbrev för erbjudanden och nyheter.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Din e-post" class="px-4 py-2 rounded-l text-gray-800 w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 PremiumTröjor. Alla rättigheter reserverade.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden items-center">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span>Produkten har lagts i varukorgen!</span>
+    </div>
+
+    <script>
+        // Change main product image
+        function changeImage(src) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.classList.remove('fade-in');
+            setTimeout(() => {
+                mainImage.src = src;
+                mainImage.classList.add('fade-in');
+            }, 100);
+        }
+
+        // Select color option
+        function selectColor(color, element) {
+            document.querySelectorAll('.color-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            
+            // In a real implementation, you would change the product images based on color
+            // For this demo, we'll just show an alert
+            console.log(`Selected color: ${color}`);
+        }
+
+        // Update quantity
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            let newValue = parseInt(quantityInput.value) + change;
+            if (newValue < 1) newValue = 1;
+            quantityInput.value = newValue;
+        }
+
+        // Add to cart
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            const notification = document.getElementById('successNotification');
+            
+            // Show notification
+            notification.classList.remove('hidden');
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 3000);
+            
+            // In a real implementation, you would add the product to the cart
+            console.log(`Added ${quantity} items to cart`);
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=mehmet12321/arti" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
